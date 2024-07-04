@@ -1,0 +1,97 @@
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+p {
+  margin: 0 0;
+  position: absolute;
+  font: 16px Verdana;
+  color: #eee;
+  height: 25px;
+  top: calc(100vh - 30px);
+  text-shadow: 0 0 2px white;
+}
+
+p a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+span {
+  font-size: 11px;
+}
+
+p > a:first-of-type {
+  font-size: 20px;
+}
+
+body {
+  overflow: hidden;
+    background: url('a.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.button-1 {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: absolute; /* Change to absolute for positioning */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
+
+.confetti {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  user-select: none;
+}
+
+body {
+  cursor: pointer;
+}
+
+.name {
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 36px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 37%;
+  color: rebeccapurple;
+  font-family: 'Righteous', cursive;
+  font-size: 93px;
+  letter-spacing: 10px;
+  text-shadow: 2px 4px 11px rgb(0 0 0 / 28%);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}

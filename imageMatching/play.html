@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <title>Hafıza Oyunu</title>
+
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center p-3">
+            <h1>
+                <p class="text-center">Hafıza Oyunu</p>
+            </h1>
+        </div>
+        <div class="row justify-content-center p-3">
+            <button id="startButton" class="button-1" role="button">Başla</button>
+        </div>
+        <div class="row">
+            <div class="time">
+                <strong>Kalan Süre: <span id="time-remaining">120</span></strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="board" id="board">
+                <!-- Cards will be injected here by JavaScript -->
+            </div>
+            <div class="col-12 p-1 pb-3 text-center">
+                <a id="nextButton" href="../typing/index.html" class="btn-next" style="display: none;">İleri »</a>
+                <button id="retryButton" class="button-1" onclick="retryGame()" style="display: none;">Yeniden dene</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/play.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hunger Maze</title>
+</head>
+<body>
+    <div id="gradient"></div>
+    <div id="page">
+        <div id="Message-Container">
+            <div id="message">
+                <h1>Congratulations!</h1>
+                <p>You ease your hunger.</p>
+                <p id="moves"></p>
+                <input id="okBtn" type="button" onclick="toggleVisibility('Message-Container')" value="Cool!" />
+            </div>
+        </div>
+        <div id="menu">
+            <div class="custom-select">
+                <select id="diffSelect">
+                    <option value="10">Kolay</option>
+                    <option value="15">Orta</option>
+                    <option value="25">Zor</option>
+                    <option value="38">Çok Zor</option>
+                </select>
+            </div>
+            <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Başla" />
+        </div>
+        <div id="view">
+            <div id="mazeContainer">
+                <canvas id="mazeCanvas" class="border"></canvas>
+            </div>
+        </div>
+        <!-- Next button for winning the game -->
+        <div id="nextButton" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+    <button onclick="nextLevel()">Next</button>
+</div>
+        <div class="try-again hidden" id="tryAgain" display="none" onclick="tryAgain()" style="display: none;position: fixed; bottom: 0px; right: 120px;">Try Again</div>
+        <div class="timer" id="timer" style="position: fixed; bottom: 20px; right: 250px;">02:00</div>
+
+        <!-- Directional Buttons -->
+        <div id="controls">
+            <button id="up" onclick="move('up')">Yukarı</button>
+            <button id="left" onclick="move('left')">Sol</button>
+            <button id="right" onclick="move('right')">Sağ</button>
+            <button id="down" onclick="move('down')">Aşağı</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image and Audio Navigator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="image"></div>
+    <svg id="stage" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <g id="branchGroup"></g>
+      <g id="thornGroup"></g>
+      <g id="leafGroup"></g>
+      <g id="flowerGroup"></g>
+    </svg>
+  </div>
+  <div id="image-preload"></div>
+
+  <div id="buttons">
+    <button id="ileri" class="button" style="--color: #ff6a2f;">İleri</button>
+  </div>
+
+  <audio id="audio" controls></audio>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js'></script>
+  <script src="./script.js"></script>
+
+  <svg style="display: none">
+    <symbol id="arrow-right" viewBox="0 0 20 10">
+      <path d="M14.84 0l-1.08 1.06 3.3 3.2H0v1.49h17.05l-3.3 3.2L14.84 10 20 5l-5.16-5z"></path>
+    </symbol>
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="1.8" numOctaves="6" stitchTiles="stitch"></feTurbulence>
+    </filter>
+  </svg>
+</body>
+</html>

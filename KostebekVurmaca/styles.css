@@ -1,0 +1,115 @@
+body {
+    background-image: url('a.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent image repeat */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url('a.png'); /* Background image for larger screens (e.g., PCs) */
+    }
+}
+
+.try-again, #startButton, #nextButton {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 20px 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.try-again:hover, .try-again:focus, #startButton:hover, #startButton:focus, #nextButton:hover, #nextButton:focus {
+    background-color: #F082AC;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.game-container {
+    background-color: #FFD1DC; /* Soft pastel pink */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Use fr units for flexible columns */
+    gap: 5px;
+    border: 2px solid rgb(216, 216, 216);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%; /* Adjust width to 100% */
+    max-width: 400px; /* Set max-width for better scaling */
+}
+
+.hole {
+    height: 80px; /* Adjust height */
+    width: 80px; /* Adjust width */
+    background: #4A90E2; /* New hole color */
+    border: 5px solid rgb(30, 30, 30);
+    cursor: pointer;
+    border-radius: 50%; /* Adjust border radius */
+}
+
+.mole {
+    background-size: 80px; /* Adjust mole size */
+    background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/20231130123541/mole.png");
+}
+
+@media only screen and (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(4, 1fr); /* Use fr units for flexible columns */
+    }
+
+    .hole {
+        height: 50px; /* Adjust height */
+        width: 50px; /* Adjust width */
+    }
+
+    .mole {
+        background-size: 50px; /* Adjust mole size */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .game-container {
+        grid-template-columns: repeat(3, 1fr); /* Use 3 columns on very small screens */
+    }
+
+    .hole {
+        height: 40px; /* Adjust height */
+        width: 40px; /* Adjust width */
+    }
+
+    .mole {
+        background-size: 40px; /* Adjust mole size */
+    }
+}
